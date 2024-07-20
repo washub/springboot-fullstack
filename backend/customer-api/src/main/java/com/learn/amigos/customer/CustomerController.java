@@ -28,7 +28,7 @@ public class CustomerController {
     @PutMapping("/customer/{id}")
     public ResponseEntity<?> updateCustomer(@RequestBody CustomerRegistrationRequest request, @PathVariable Long id){
         customerService.updateCustomer(id, request);
-        return ResponseEntity.ok("Resource updated Successfully...");
+        return ResponseEntity.ok("Resource updated Successfully");
     }
 
     @DeleteMapping("/customer/{id}")
