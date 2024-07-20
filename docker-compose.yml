@@ -2,7 +2,7 @@
 services:
   db:
     container_name: my-postgres
-    image: postgres
+    image: postgres:16
     environment:
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: admin
@@ -17,7 +17,7 @@ services:
 
   customer-api:
     container_name: customer-api
-    image: idockerwas/customer-api
+    image: idockerwas/customer-api:latest
     environment:
       SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/customer
     ports:
