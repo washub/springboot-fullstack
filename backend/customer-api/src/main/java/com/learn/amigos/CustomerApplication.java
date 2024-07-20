@@ -32,6 +32,7 @@ public class CustomerApplication {
 			var obj = new Customer(fullName, faker.number().numberBetween(11,99), fullName.split(" ")[0].concat(UUID.randomUUID().toString()+"@gmail.com"));
 			var objj = new Customer(fullNamee, faker.number().numberBetween(11,99), fullNamee.split(" ")[0].concat(UUID.randomUUID().toString()+"@outlook.com"));
 			//in future we may have to disable this feature
+			//Adding comment to trigger ci
 			customerRepository.saveAll(List.of(obj, objj));
 		};
 	}
