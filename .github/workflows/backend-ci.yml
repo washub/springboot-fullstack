@@ -3,9 +3,9 @@ name: CI - Build SpringBoot Backend
 on:
   pull_request:
     branches:
-      - master
+      - main
     paths:
-      - backend/**
+      - backend/customer-api/**
 
 jobs:
   build:
@@ -27,7 +27,7 @@ jobs:
           --health-retries 5
     defaults:
       run:
-        working-directory: ./backend
+        working-directory: ./backend/customer-api
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-java@v4
